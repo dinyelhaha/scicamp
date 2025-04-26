@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEMI: Manila Heat Tracker</title>
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+
+    <!-- Leaflet Search CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-control-search/dist/leaflet-search.min.css"
+    />
+    <script src="https://unpkg.com/leaflet-control-search/dist/leaflet-search.min.js"></script>
+
+    <!-- Leaflet Loading CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-loading/dist/leaflet.loading.css"
+    />
+    <script src="https://unpkg.com/leaflet-loading/dist/leaflet.loading.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+      }
+
+      /* Legend styling */
+      #legend {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+      }
+
+      /* Health tip box on the right */
+      #health-tip {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+      }
+
+      /* Location Search box styling */
+      #controls {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+      }
+
+      #search-box {
+        width: 200px;
+        padding: 5px;
+        font-size: 14px;
+      }
+
+      /* Remove Jump to Location dropdown */
+      #locationDropdown {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="last-updated" style="text-align: center; margin: 10px"></div>
+    <div id="map"></div>
+
+    <!-- Legend -->
+    <div id="legend">
+      <h4>Temperature (°C)</h4>
+      <i style="background: #800026"></i> 40+<br />
+      <i style="background: #bd0026"></i> 37–39<br />
+      <i style="background: #e31a1c"></i> 34–36<br />
+      <i style="background: #fc4e2a"></i> 30–33<br />
+      <i style="background: #ffeda0"></i> below 30
+    </div>
+
+    <!-- General Safety Tip -->
+    <div id="health-tip">
+      <strong>Stay Cool:</strong> Avoid midday heat, drink water, use cooling
+      zones.
+    </div>
+
+    <!-- Location Search Box -->
+    <div id="controls">
+      <input id="search-box" type="text" placeholder="Search location..." />
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/src/main.js"></script>
+  </body>
+</html>
