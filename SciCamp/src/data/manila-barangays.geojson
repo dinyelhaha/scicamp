@@ -1,0 +1,22 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": { "name": "Barangay 123" },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[120.9835, 14.5990], [120.9850, 14.5990], [120.9850, 14.6000], [120.9835, 14.6000], [120.9835, 14.5990]]]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": { "name": "Barangay 2" },
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [[[120.9805, 14.5905], [120.9820, 14.5905], [120.9820, 14.5915], [120.9805, 14.5915], [120.9805, 14.5905]]]
+        }
+      }
+    ]
+  }
+  
